@@ -1,34 +1,71 @@
-# Sprint3
+# 🏥 Simulador de Cirurgia Virtual
 
-INTRODUÇÃO
+O **Simulador de Cirurgia Virtual** é uma aplicação interativa desenvolvida para auxiliar médicos em formação a praticar procedimentos cirúrgicos em um ambiente virtual gamificado. O sistema oferece feedback em tempo real, avaliando a tomada de decisão, o tempo de resposta e a precisão das ações, visando aprimorar as habilidades cirúrgicas dos usuários.
 
-O projeto “Simulador de Cirurgia Virtual” tem como objetivo proporcionar um treinamento interativo e eficaz para médicos em formação. Utilizando uma abordagem gamificada, o simulador permite ao usuário praticar a realização de procedimentos cirúrgicos em um ambiente virtual, obtendo feedback em tempo real sobre suas ações. O sistema foi projetado para avaliar a tomada de decisão, o tempo de resposta e a precisão das ações, com o objetivo de aprimorar as habilidades cirúrgicas dos alunos.
+## 📂 Estrutura do Projeto
 
-METODOLOGIA
+```
+SimuladorCirurgiaVirtual/
+├── data/                   # Dados utilizados no simulador
+├── models/                 # Modelos e estruturas de dados
+├── scripts/                # Scripts principais de execução
+│   ├── main.py             # Script principal para iniciar o simulador
+│   └── utils.py            # Funções auxiliares
+├── tests/                  # Testes unitários e de integração
+├── README.md               # Documentação do projeto
+└── requirements.txt        # Dependências do projeto
+```
 
-Para desenvolver o simulador foram utilizados os seguintes passos:
+## 🛠️ Tecnologias Utilizadas
 
-Estruturas de dados:
+- **Python** 3.x
+- **Bibliotecas**:
+  - `pygame` para a interface gráfica e interatividade
+  - `numpy` para operações numéricas
+  - `json` para manipulação de dados estruturados
 
-Árvore binária: Utilizada para armazenar decisões e etapas cirúrgicas, permitindo fácil rastreamento das ações do usuário. 
-Listas e dicionários: Para armazenar pontos e comentários associados a cada ação, permitindo um sistema de pontuação eficiente.
+## 🚀 Como Executar o Projeto
 
-Funções Implementadas:
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/pacheco365/Sprint3.git
+   cd Sprint3
+   ```
 
-NodoArvore: Classe que representa um nó na árvore de decisões.
-acoes(elem, dado): Insere passos na árvore de decisões.
-sim_cirurgia(passo_atual): Simula a execução dos passos cirúrgicos.
-avaliacao(ferramenta_correta, ferramenta_selecionada, tempo_esperado, tempo_real): Avalia o desempenho do jogador com base nas ferramentas selecionadas e no tempo de resposta.
-calcula_media_pontuacao(pontuacoes): Calcula a média de pontuação do médico.
-avalia_medico(id_medico, pontuacao_final): Avalia e fornece feedback sobre o desempenho do médico.
+2. **Crie um ambiente virtual (opcional, mas recomendado)**:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # No Windows: venv\Scripts\activate
+   ```
 
-Ambiente de Desenvolvimento:
+3. **Instale as dependências**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-O simulador foi desenvolvido em Python, permitindo a execução de algoritmos recursivos e manipulação de estruturas de dados.
+4. **Inicie o simulador**:
+   ```bash
+   python scripts/main.py
+   ```
 
-INTEGRANTES:
+## 🧩 Funcionalidades
 
-Leonardo Correia RM 550413
-Murilo Henrique Obinata RM 99855
-Gustavo Veríssimo RM 551244
-Gabriel Pacheco RM 550191
+- **Árvore de Decisão Binária**: Estrutura que armazena decisões e etapas cirúrgicas, permitindo rastreamento eficiente das ações do usuário.
+- **Sistema de Pontuação**: Avalia o desempenho com base na precisão das ações e no tempo de resposta.
+- **Feedback em Tempo Real**: Comentários e orientações fornecidos durante a simulação para melhorar o aprendizado.
+- **Interface Interativa**: Ambiente gráfico intuitivo para simulação dos procedimentos.
+
+## 🧪 Testes
+
+Para executar os testes unitários e de integração, utilize:
+```bash
+pytest tests/
+```
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+
+---
+
+*Desenvolvido por Gabriel Pacheco.*
